@@ -5,19 +5,22 @@ import {useState} from "react";
 
 const DUMMY_EXPENSES = [
     {
+        id: 'e1',
         date: new Date(2023, 0, 10),
         title: 'New book',
         amount: 10.99
     },
     {
+        id: 'e2',
         date: new Date(2023, 0, 10),
         title: 'New shelf',
         amount: 99.99
     },
     {
+        id: 'e3',
         date: new Date(2024, 9, 4),
         title: 'Pirko',
-        amount: 389.99
+        amount: 399.99
     }
 ]
 
@@ -36,7 +39,7 @@ const App = () => {
   return (
     <div className="App">
         <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-        <Expenses expenseData={DUMMY_EXPENSES}></Expenses>
+        <Expenses expenseData={expenses}></Expenses>
     </div>
   );
 }
